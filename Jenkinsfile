@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Restoring dependencies"){
             when {
-                branch {
+                expression {
                     return env.GIT_BRANCH == "origin/main"
                 }
             }
